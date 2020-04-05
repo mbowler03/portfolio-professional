@@ -196,7 +196,7 @@
           </div>
           <div class="col-md-4">
             <a href="https://mbowler03.github.io/charlies-travel/" data-toggle="lightbox">
-              <img src="img/charlies-travelsalt1.JPG" alt="" class="img-fluid">
+              <img src="img/charlies-travelsalt1.jpg" alt="" class="img-fluid">
             </a>
           </div>
 
@@ -283,7 +283,7 @@
   </div>
 
 
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
@@ -292,15 +292,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
 
   <script>
-    $('.port-item').click(function () {
-      $('.collapse').collapse('hide');
-    });
+  $(".port-item").click(function() {
+    $(".collapse").collapse("hide");
+  });
+  
+  $(document).on("click", '[data-toggle="lightbox"]', function(e) {
+    e.preventDefault();
+    $(this).ekkoLightbox();
+  });
+</script>
 
-    $(document).on('click', '[data-toggle="lightbox"]', function (e) {
-      e.preventDefault();
-      $(this).ekkoLightbox();
-    });
-  </script>
 </body>
 
 </html>
