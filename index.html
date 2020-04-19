@@ -224,7 +224,7 @@
 
       <div class="card card-body py-5">
 
-        <form>
+        <form action="POST" data-netlify="true">
           <div class="form-group">
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
@@ -232,7 +232,7 @@
                   <i class="fas fa-user"></i>
                 </span>
               </div>
-              <input type="text" class="form-control bg-dark text-white" placeholder="Name">
+              <input type="text" name="name" class="form-control bg-dark text-white" placeholder="Name">
             </div>
           </div>
 
@@ -243,7 +243,7 @@
                   <i class="fas fa-envelope"></i>
                 </span>
               </div>
-              <input type="email" class="form-control bg-dark text-white" placeholder="Email">
+              <input type="email" name="email" class="form-control bg-dark text-white" placeholder="Email">
             </div>
           </div>
 
@@ -254,10 +254,12 @@
                   <i class="fas fa-pencil-alt"></i>
                 </span>
               </div>
-              <textarea class="form-control bg-dark text-white" placeholder="Comments"></textarea>
+              <textarea name="comments" class="form-control bg-dark text-white"  placeholder="Comments"></textarea>
             </div>
           </div>
-
+          <div class="field">
+            <div> data-netlify-recapcha="true"</div>
+          </div>
           <input id="contact-submit" input type="submit" value="Submit" class="btn btn-danger btn-block btn-lg">
         </form>
       </div>
